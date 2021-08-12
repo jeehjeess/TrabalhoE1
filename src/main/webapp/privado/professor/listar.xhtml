@@ -28,7 +28,10 @@
                         <p:outputLabel value="#{obj.email}"/>
                     </p:column>  
                     <p:column headerText="nascimento">
-                        <p:outputLabel value="#{obj.nascimento}"/>
+                        <p:outputLabel value="#{obj.nascimento}">
+                            <f:converter converterId="converterDatas"/>
+                        </p:outputLabel>
+                        
                     </p:column>  
                     <p:column headerText="Titulação">
                         <p:outputLabel value="#{obj.titulacao}"/>
@@ -81,6 +84,7 @@
                                          value="#{controleAluno.objeto.nascimento}"
                                          mask="true" pattern="dd/MM/yyyy" navigator="true" size="10">
                                         <f:converter converterId="converterDatas"/>
+                            
                             </p:calendar>
                              <p:outputLabel value="titulacao" for="txttitulacao"/>
                             <p:inputText id="txttitulacao"

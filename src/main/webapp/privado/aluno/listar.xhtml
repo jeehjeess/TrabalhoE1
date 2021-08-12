@@ -28,7 +28,9 @@
                         <p:outputLabel value="#{obj.email}"/>
                     </p:column>  
                     <p:column headerText="nascimento">
-                        <p:outputLabel value="#{obj.nascimento}"/>
+                        <p:outputLabel value="#{obj.nascimento}">
+                        <f:converter converterId="converterDatas"/>
+                        </p:outputLabel>
                     </p:column>  
                                                      
                     <p:column headerText="Ações">

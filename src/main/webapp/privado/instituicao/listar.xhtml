@@ -25,7 +25,9 @@
                         <p:outputLabel value="#{obj.nome}"/>
                     </p:column> 
                     <p:column headerText="Ano de Fundação">
-                        <p:outputLabel value="#{obj.anoFundacao}"/>
+                        <p:outputLabel value="#{obj.anoFundacao}">
+                            <f:converter converterId="converterDatas"/>
+                        </p:outputLabel>
                     </p:column>  
                                  
                     <p:column headerText="Ações">
